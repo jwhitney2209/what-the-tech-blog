@@ -1,0 +1,37 @@
+    <article class="container mt-4 box">
+      <a href="/dashboard"> &larr; Back to dashboard</a>
+      <h2 class="title">
+        Edit Post
+      </h2>
+      <form class="edit-post-form">
+        <div>
+          <input name="post-title" type="text" value="{{post.title}}" />
+          <span>({{format_url post.post_url}})</span>
+        </div>
+        <div>
+          <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
+        </div>
+        <button class="button is-info" type="submit">Save post</button>
+        <button type="button" class="button is-info delete-post-btn">Delete post</button>
+      </form>
+    </article>
+    
+    <form class="container comment-form box">
+      <div>
+        <textarea class="textarea" name="comment-body" placeholder="e.g. Hello world"></textarea>
+      </div>
+    
+      <div class="mt-2">
+        <div class="control">
+          <button class="button is-info" type="submit">add comment</button>
+        </div>
+      </div>
+    </form>
+    <section class="container mt-4 box">
+      {{> comments post.comments}}
+    </section>
+
+    
+    <script src="/javascript/edit-post.js"></script>
+    <script src="/javascript/delete-post.js"></script>
+    <script src="/javascript/comment.js"></script>
