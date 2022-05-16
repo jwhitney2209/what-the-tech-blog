@@ -4,13 +4,10 @@ const { Post, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 // get all posts for dashboard
-router.get('/', withAuth, (req, res) => {
+router.get('/', (req, res) => {
   console.log(req.session);
   console.log('======================');
   Post.findAll({
-    where: {
-      user_id: req.session.user_id
-    },
     attributes: [
       'id',
       'post_content',
@@ -42,7 +39,7 @@ router.get('/', withAuth, (req, res) => {
     });
 });
 
-router.get('/edit/:id', withAuth, (req, res) => {
+router.get('/edit/:id', (req, res) => {
   Post.findByPk(req.params.id, {
     attributes: [
       'id',

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Just Tech News</title>
+  <title>What The Tech</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css" />
   <link rel="stylesheet" href="https://jenil.github.io/bulmaswatch/superhero/bulmaswatch.min.css" />
 </head>
@@ -22,16 +22,13 @@
         <a class="navbar-item" href="/">
           Home
         </a>
-        {{#if loggedIn}}
         <a class="navbar-item" href="/dashboard">
           Dashboard
         </a>
         <a id="logout" class="navbar-item">
           Logout
         </a>
-        {{else}}
         <a class="navbar-item" href="/login">Login</a>
-        {{/if}}
       </div>
     </div>
   </nav>
@@ -43,8 +40,6 @@
   <main>
     {{{body}}}
   </main>
-  {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
-  {{/if}}
 </body>
 </html>
