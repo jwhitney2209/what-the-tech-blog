@@ -1,0 +1,50 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Just Tech News</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css" />
+  <link rel="stylesheet" href="https://jenil.github.io/bulmaswatch/superhero/bulmaswatch.min.css" />
+</head>
+
+<body>
+  <nav class="navbar container" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMain">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navbarMain" class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="/">
+          Home
+        </a>
+        {{#if loggedIn}}
+        <a class="navbar-item" href="/dashboard">
+          Dashboard
+        </a>
+        <a id="logout" class="navbar-item">
+          Logout
+        </a>
+        {{else}}
+        <a class="navbar-item" href="/login">Login</a>
+        {{/if}}
+      </div>
+    </div>
+  </nav>
+  <section class="hero container is-dark">
+    <div class="hero-body">
+      <p class="title is-2">What The Tech!?</p>
+    </div>
+  </section>
+  <main>
+    {{{body}}}
+  </main>
+  {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
+</body>
+</html>

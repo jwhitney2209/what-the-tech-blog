@@ -1,0 +1,13 @@
+<article class="container mt-4 box">
+  <div class="message is-primary">
+    <header class="message-header">
+      <p>
+        <a href="{{post_url}}" target="_blank">{{title}}</a>
+      </p>
+      <span>Posted by {{user.username}} on {{format_date created_at}}</span>
+    </header>
+  </div>
+  <div class="message-body m-4">
+    {{post_text}}
+  </div>
+</article>
