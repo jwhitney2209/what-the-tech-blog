@@ -1,49 +1,27 @@
-<section class="container ">
-<form class="login-form">
-  <div class="columns box m-2">
-    <div class="column is-one-third field">
-      <h1 class="title">Login</h1>
-      <div class="field">
-        <label class="label" for="username-login">Username</label>
-        <div class="control">
-          <input id="username-login" class="input" type="text" placeholder="username">
+<div class="container">
+  <form class="login-form">
+    <div class="columns box m-2">
+      <div class="column is-one-third field">
+        <h1 class="title">Login</h1>
+        <div class="field">
+          <label class="label" for="username-login">Username</label>
+          <div class="control">
+            <input id="username-login" class="input" type="text" placeholder="username">
+          </div>
+        </div>
+        <div class="field">
+          <label class="label" for="password-login">Password</label>
+          <div class="control">
+            <input id="password-login" class="input" type="current-password" placeholder="password">
+          </div>
+        </div>
+        <div class="field is-grouped">
+          <div class="control">
+            <button type="submit" class="button is-info">Log In</button>
+            <a class="button is-info" href="/signup">Sign Up</a>
+          </div>
         </div>
       </div>
-      <div class="field">
-        <label class="label" for="password-login">Password</label>
-        <div class="control">
-          <input id="password-login" class="input" type="password" placeholder="password">
-        </div>
-      </div>
-      <div class="field is-grouped">
-        <div class="control">
-          <button type="submit" class="button is-info">Log In</button>
-        </div>
-      </div>
-    </div>
-</form>
-</section>
-<section class="container ">
-<form class="sign-up-form">
-  <div class="columns box m-2">
-    <div class="column is-one-third field">
-      <h1 class="title">Sign Up</h1>
-      <div class="field">
-        <label class="label">Username</label>
-        <input id="username-signup" class="input" type="text" placeholder="username">
-      </div>
-
-      <div class="field">
-        <label class="label">Password</label>
-        <input id="password-signup" class="input" type="password" placeholder="password">
-      </div>
-      <div class="field is-grouped">
-        <div class="control">
-          <button type="submit" class="button is-info">Create Account</button>
-        </div>
-      </div>
-    </div>
-</form>
-</section>
-
+  </form>
+</div>
 <script src="/javascript/login.js"></script>
